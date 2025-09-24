@@ -31,9 +31,8 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/contact`, // ✅ backend API
-        {
+      const response = await fetch("/api/contact", {
+
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -1,40 +1,40 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, cardHoverSmall } from "@/utils/animations";
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { fadeInUp, staggerContainer, cardHoverSmall } from "@/utils/animations"
 
 interface Project {
-  _id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  githubLink: string;
-  demoLink: string;
-  image: string;
+  _id: string
+  title: string
+  description: string
+  technologies: string[]
+  githubLink: string
+  demoLink: string
+  image: string
 }
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/projects") // 🔗 your Express backend
+    fetch("/api/projects") // ✅ works in Vercel (uses our static JSON)
       .then((res) => res.json())
       .then((data) => {
-        setProjects(data);
-        setLoading(false);
+        setProjects(data)
+        setLoading(false)
       })
       .catch((err) => {
-        console.error("Error fetching projects:", err);
-        setLoading(false);
-      });
-  }, []);
+        console.error("Error fetching projects:", err)
+        setLoading(false)
+      })
+  }, [])
 
   if (loading) {
-    return <p className="text-center py-12">Loading projects...</p>;
+    return <p className="text-center py-12">Loading projects...</p>
   }
 
   return (
@@ -85,6 +85,7 @@ export default function Projects() {
               >
                 {project.title}
               </motion.h3>
+
               <motion.p
                 className="text-secondary mb-4"
                 initial={{ opacity: 0 }}
@@ -148,5 +149,5 @@ export default function Projects() {
         ))}
       </motion.div>
     </div>
-  );
+  )
 }

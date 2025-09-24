@@ -1,0 +1,32 @@
+[
+  { "_id": "1", "name": "React.js", "category": "Frontend" },
+  { "_id": "2", "name": "Next.js", "category": "Frontend" },
+  { "_id": "3", "name": "THTML", "category": "Frontend" },
+  { "_id": "4", "name": "CSS", "category": "Frontend" },
+  { "_id": "5", "name": "Tailwind CSS", "category": "Frontend" },
+  { "_id": "6", "name": "Bootstrap", "category": "Frontend" },
+  { "_id": "7", "name": "Framer Motion", "category": "Frontend" },
+
+  { "_id": "8", "name": "Spring Boot", "category": "Backend" },
+  { "_id": "9", "name": "Express.js", "category": "Backend" },
+  { "_id": "10", "name": "TypeScript.js", "category": "Backend" },
+
+  { "_id": "11", "name": "MySQL", "category": "Database" },
+  { "_id": "12", "name": "MsSQL", "category": "Database" },
+  { "_id": "13", "name": "MongoDB", "category": "Database" },
+
+  { "_id": "14", "name": "Java", "category": "Programming Languages" },
+  { "_id": "15", "name": "C", "category": "Programming Languages" },
+  { "_id": "16", "name": "Python", "category": "Programming Languages" },
+  { "_id": "17", "name": "JavaScript", "category": "Programming Languages" },
+
+  { "_id": "18", "name": "ESP32", "category": "Hardware & IoT" },
+  { "_id": "19", "name": "Ardino", "category": "Hardware & IoT" },
+  { "_id": "20", "name": "Peltier Module", "category": "Hardware & IoT" },
+
+  { "_id": "21", "name": "Git/GitHub", "category": "Tools" },
+  { "_id": "22", "name": "Postman", "category": "Tools" },
+  { "_id": "23", "name": "Figma", "category": "Tools" },
+  { "_id": "24", "name": "Canva", "category": "Tools" },
+  { "_id": "25", "name": "Vercel", "category": "Tools" }
+]

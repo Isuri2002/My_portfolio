@@ -6,6 +6,7 @@ import { fadeInUp, fadeInDown } from '@/utils/animations'
 export default function About() {
   return (
     <div className="container max-w-7xl mx-auto py-12">
+      {/* Page Title */}
       <motion.h1 
         className="text-4xl font-bold mb-8 text-center"
         {...fadeInDown}
@@ -19,9 +20,10 @@ export default function About() {
         {...fadeInUp}
       >
         <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
-          I&apos;m a self-motivated and enthusiastic learner passionate about software engineering, aiming to 
-          build a successful career in the IT industry. Committed to developing strong technical skills, a 
-          growth mindset, and a professional attitude to become a well rounded IT professional.
+          I&apos;m a self-motivated and enthusiastic learner passionate about software engineering, 
+          aiming to build a successful career in the IT industry. Committed to developing strong 
+          technical skills, a growth mindset, and a professional attitude to become a 
+          well-rounded IT professional.
         </p>
       </motion.section>
 
@@ -36,21 +38,23 @@ export default function About() {
         >
           Education
         </motion.h2>
-        <motion.div 
-          className="max-w-3xl mx-auto"
-        >
+
+        <motion.div className="max-w-3xl mx-auto">
+          {/* University */}
           <motion.div 
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md mb-6"
             {...fadeInUp}
           >
             <h3 className="text-xl font-semibold mb-2">
-              Underraduate of Bachelor of Science in Informaation technology
+              Undergraduate of Bachelor of Science in Information Technology
             </h3>
             <p className="text-primary mb-2">University of Moratuwa • 2023 - 2027</p>
             <p className="text-secondary">
-              Graduate with honors. Focused on software engineering and web development.
+              Focused on software engineering and web development.
             </p>
           </motion.div>
+
+          {/* A/Ls */}
           <motion.div 
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md mb-6"
             {...fadeInUp}
@@ -60,10 +64,10 @@ export default function About() {
             </h3>
             <p className="text-primary mb-2">Taxila Central College, Horana • 2021 - 2022</p>
             <p className="text-secondary">
-              Completed with AAC for Physics, Chemistry and Combined Mathematics along with z-score of 1.69. 
+              Completed with AAC for Physics, Chemistry, and Combined Mathematics along with 
+              a Z-score of 1.69.
             </p>
           </motion.div>
-          
         </motion.div>
       </motion.section>
     </div>

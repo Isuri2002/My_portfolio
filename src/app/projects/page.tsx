@@ -1,40 +1,40 @@
 'use client'
 
-import { useState, useEffect } from "react";
-import Image from 'next/image';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations';
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { fadeInUp, staggerContainer, cardHoverSmall } from "@/utils/animations"
 
 interface Project {
-  _id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  githubLink: string;
-  demoLink: string;
-  image: string;
+  _id: string
+  title: string
+  description: string
+  technologies: string[]
+  githubLink: string
+  demoLink: string
+  image: string
 }
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`) // ✅ flexible, no hardcoded localhost
-      .then(res => res.json())
-      .then(data => {
-        setProjects(data);
-        setLoading(false);
+    fetch("/api/projects") // ✅ works in Vercel using static JSON
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data)
+        setLoading(false)
       })
-      .catch(err => {
-        console.error("Error fetching projects:", err);
-        setLoading(false);
-      });
-  }, []);
+      .catch((err) => {
+        console.error("Error fetching projects:", err)
+        setLoading(false)
+      })
+  }, [])
 
   if (loading) {
-    return <p className="text-center py-12">Loading projects...</p>;
+    return <p className="text-center py-12">Loading projects...</p>
   }
 
   return (
@@ -70,6 +70,7 @@ export default function Projects() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
+            {/* Image */}
             <motion.div
               className="aspect-video bg-gray-200 dark:bg-gray-800"
               whileHover={{ scale: 1.05 }}
@@ -84,6 +85,7 @@ export default function Projects() {
               />
             </motion.div>
 
+            {/* Content */}
             <div className="p-6">
               <motion.h3
                 className="text-xl font-semibold mb-2"
@@ -92,6 +94,7 @@ export default function Projects() {
               >
                 {project.title}
               </motion.h3>
+
               <motion.p
                 className="text-secondary mb-4"
                 initial={{ opacity: 0 }}
@@ -101,6 +104,7 @@ export default function Projects() {
                 {project.description}
               </motion.p>
 
+              {/* Tech tags */}
               <motion.div
                 className="flex flex-wrap gap-2 mb-4"
                 initial={{ opacity: 0 }}
@@ -119,6 +123,7 @@ export default function Projects() {
                 ))}
               </motion.div>
 
+              {/* Links */}
               <motion.div
                 className="flex gap-4"
                 initial={{ opacity: 0 }}
@@ -153,5 +158,5 @@ export default function Projects() {
         ))}
       </motion.div>
     </div>
-  );
+  )
 }

@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "1",
+    "title": "PaperSync Exam Management",
+    "description": "2nd year software project.Exam Paper Management & Resource Person Payment System is a full-stack platform developed to streamline exam paper workflows, subject assignments, user management, and payment coordination",
+    "technologies": ["React", "Spring Boot", "MySQL"],
+    "githubLink": "https://lnkd.in/ga68SYS2 ",
+    "demoLink": "https://www.linkedin.com/posts",
+    "image": "/paper.png"
+  },
+  {
+    "_id": "2",
+    "title": "Portfolio website",
+    "description": "Personal portfolio and admin dashboard system that the public-facing portfolio showcases projects, skills, and a contact form for visitors, while the admin panel provides a secure interface for managing portfolio content.",
+    "technologies": ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    "githubLink": "https://github.com/yourname/rfid-pathfinder",
+    "demoLink": "https://example.com/pathfinder-demo",
+    "image": "/My portfolio.png"
+  },
+  {
+    "_id": "3",
+    "title": "TerraSmart",
+    "description": "1st year hardware project.Terrasmart is a microcontroller‑based automated closed terrarium system that monitors and regulates temperature, soil moisture, and habitat conditions to optimize plant growth with minimal manual intervention",
+    "technologies": ["Arduino", "Esp32", "C++", "Peltier Cooling Module"],
+    "githubLink": "https://lnkd.in/ga68SYS2 ",
+    "demoLink": "https://www.linkedin.com/posts/isurim2002_hardwareproject-arduino-iot-activity-7241813651957936129-1bjP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJ2OrMBZz3Xr_3eAHZR9mK87mqmBpOlpD0",
+    "image": "/terrarsmart.jpeg"
+  }
+]

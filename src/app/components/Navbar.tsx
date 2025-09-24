@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link'
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useTheme } from '../context/ThemeContext'
@@ -6,12 +7,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
 
   const menuItems = [
     { href: '/', label: 'Home' },
@@ -19,22 +18,23 @@ export default function Navbar() {
     { href: '/projects', label: 'Projects' },
     { href: '/skills', label: 'Skills' },
     { href: '/contact', label: 'Contact' },
-  ];
+  ]
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 shadow-sm">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
+          {/* Logo / Brand */}
           <Link href="/" className="text-xl font-bold text-primary">
             IsuRi.Dev&trade;
           </Link>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
               <Link 
                 key={item.href}
-                href={item.href} 
+                href={item.href}
                 className="hover:text-primary transition-colors"
               >
                 {item.label}
@@ -45,6 +45,7 @@ export default function Navbar() {
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Toggle Theme"
             >
               {theme === 'dark' ? (
                 <SunIcon className="h-5 w-5" />
@@ -60,6 +61,7 @@ export default function Navbar() {
             onClick={toggleMobileMenu}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? (
               <XMarkIcon className="h-6 w-6" />
@@ -96,6 +98,7 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
+                {/* Theme Toggle in Mobile */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -103,8 +106,8 @@ export default function Navbar() {
                 >
                   <button
                     onClick={() => {
-                      toggleTheme();
-                      setIsMobileMenuOpen(false);
+                      toggleTheme()
+                      setIsMobileMenuOpen(false)
                     }}
                     className="flex items-center py-2 hover:text-primary transition-colors"
                   >
@@ -128,4 +131,4 @@ export default function Navbar() {
       </div>
     </nav>
   )
-} 
+}

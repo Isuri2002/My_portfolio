@@ -24,14 +24,7 @@ export default function Footer() {
             >
               <FaGithub className="h-6 w-6" />
             </a>
-            <a
-              href="https://x.com/IsuriLoku"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
-            >
-              <FaMedium className="h-6 w-6" />
-            </a>
+            
             <a
               href="https://linkedin.com/in/isurim2002"
               target="_blank"
@@ -39,6 +32,14 @@ export default function Footer() {
               className="text-secondary hover:text-primary transition-colors"
             >
               <FaLinkedin className="h-6 w-6" />
+            </a>
+            <a
+              href="https://x.com/IsuriLoku"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondary hover:text-primary transition-colors"
+            >
+              <FaMedium className="h-6 w-6" />
             </a>
           </div>
         </div>
