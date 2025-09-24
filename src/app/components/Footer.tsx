@@ -34,7 +34,7 @@ export default function Footer() {
               <FaLinkedin className="h-6 w-6" />
             </a>
             <a
-              href="https://x.com/IsuriLoku"
+              href="https://medium.com/@isurim2002"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary hover:text-primary transition-colors"

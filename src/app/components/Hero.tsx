@@ -81,7 +81,7 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="https://x.com/IsuriLoku"
+              href="https://medium.com/@isurim2002"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
