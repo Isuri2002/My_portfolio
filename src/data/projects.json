@@ -14,7 +14,7 @@
     "description": "Personal portfolio and admin dashboard system that the public-facing portfolio showcases projects, skills, and a contact form for visitors, while the admin panel provides a secure interface for managing portfolio content.",
     "technologies": ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
     "githubLink": "https://github.com/yourname/rfid-pathfinder",
-    "demoLink": "https://example.com/pathfinder-demo",
+    "demoLink": "https://my-portfolio-kappa-sage-22.vercel.app/",
     "image": "/My portfolio.png"
   },
   {
